@@ -1,13 +1,15 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #ffe6f2; /* Soft pink background */
     color: #333;
 }
 
@@ -17,11 +19,11 @@ body {
     padding: 2rem;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .navbar {
-    background-color: #2c3e50;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffb6c1; /* Light pink background */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -33,7 +35,7 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    justify-content: space-around;
 }
 
 .navbar a {
@@ -44,13 +46,14 @@ body {
 }
 
 .navbar a:hover {
-    color: #3498db;
+    color: #ff69b4; /* Brighter pink for hover */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 3rem 0;
+    padding: 4rem 0;
+    background-color: #ffe6f2;
 }
 
 .profile-img {
@@ -58,33 +61,33 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 1.5rem;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .profile h1 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ff69b4;
     margin-bottom: 0.5rem;
 }
 
 .major {
-    color: #666;
-    font-size: 1.2rem;
+    color: #777;
+    font-size: 1.3rem;
 }
 
 /* Skills Section */
 .skills {
-    background-color: white;
+    background-color: #fff0f5; /* Very light pink */
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
 .skills h2 {
-    color: #2c3e50;
+    color: #ff69b4;
     margin-bottom: 1.5rem;
 }
 
@@ -95,11 +98,11 @@ body {
 }
 
 .skill-item {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    border-radius: 6px;
+    background-color: #ffe6f2;
+    padding: 1.5rem;
+    border-radius: 10px;
     text-align: center;
-    border: 1px solid #e9ecef;
+    border: 1px solid #ffc0cb;
     transition: transform 0.3s ease;
 }
 
@@ -109,15 +112,15 @@ body {
 
 /* Languages Table */
 .languages {
-    background-color: white;
+    background-color: #fff0f5;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
 .languages h2 {
-    color: #2c3e50;
+    color: #ff69b4;
     margin-bottom: 1.5rem;
 }
 
@@ -129,17 +132,17 @@ table {
 th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #ffc0cb;
 }
 
 th {
-    background-color: #f8f9fa;
-    color: #2c3e50;
+    background-color: #ffe6f2;
+    color: #ff69b4;
     font-weight: 600;
 }
 
 td a {
-    color: #3498db;
+    color: #ff69b4;
     text-decoration: none;
 }
 
@@ -151,12 +154,12 @@ td a:hover {
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #2c3e50;
+    background-color: #ffb6c1;
     color: white;
 }
 
 footer a {
-    color: #3498db;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -169,15 +172,15 @@ footer a:hover {
     .container {
         padding: 1rem;
     }
-    
+
     .profile h1 {
         font-size: 2rem;
     }
-    
+
     .table-container {
         overflow-x: auto;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
