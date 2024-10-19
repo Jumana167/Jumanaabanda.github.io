@@ -1,187 +1,132 @@
-/* Global Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec; /* Light pink background */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-color: #ffe6f2; /* Soft pink background */
     color: #333;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 20px;
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar {
-    background-color: #ffb6c1; /* Light pink background */
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    background-color: #f48fb1;
+    padding: 15px 0;
+    text-align: center;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar a {
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
     color: white;
-    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: #ff69b4; /* Brighter pink for hover */
+.navbar ul li a.active {
+    border-bottom: 2px solid white;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: #ffe6f2;
-}
-
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.profile h1 {
-    font-size: 2.5rem;
-    color: #ff69b4;
-    margin-bottom: 0.5rem;
-}
-
-.major {
-    color: #777;
-    font-size: 1.3rem;
-}
-
-/* Skills Section */
-.skills {
-    background-color: #fff0f5; /* Very light pink */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.skills h2 {
-    color: #ff69b4;
-    margin-bottom: 1.5rem;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.skill-item {
-    background-color: #ffe6f2;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #ffc0cb;
-    transition: transform 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-3px);
-}
-
-/* Languages Table */
-.languages {
-    background-color: #fff0f5;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.languages h2 {
-    color: #ff69b4;
-    margin-bottom: 1.5rem;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 1rem;
+/* Form Section */
+.contact-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
     text-align: left;
-    border-bottom: 1px solid #ffc0cb;
 }
 
-th {
-    background-color: #ffe6f2;
-    color: #ff69b4;
-    font-weight: 600;
+.contact-section h1 {
+    text-align: center;
+    color: #d81b60; /* Dark pink color */
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-td a {
-    color: #ff69b4;
-    text-decoration: none;
+.contact-form .form-group {
+    margin-bottom: 20px;
 }
 
-td a:hover {
-    text-decoration: underline;
+.contact-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f48fb1;
+    box-shadow: 0 0 5px rgba(244, 143, 177, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #d81b60;
 }
 
 /* Footer */
-footer {
+.footer {
+    background-color: #f48fb1;
+    padding: 15px;
     text-align: center;
-    padding: 2rem;
-    background-color: #ffb6c1;
     color: white;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
+.footer a {
+    color: white;
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    .profile h1 {
-        font-size: 2rem;
-    }
-
-    .table-container {
-        overflow-x: auto;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
+/* Add some space between the footer and form */
+.contact-section {
+    margin-bottom: 80px;
 }
