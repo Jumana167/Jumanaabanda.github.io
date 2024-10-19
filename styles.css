@@ -46,6 +46,122 @@ body {
     color: #f48fb1; /* Lighter pink for hover effect */
 }
 
+/* Header Section */
+.header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.header h1 {
+    font-size: 48px;
+    color: #ec407a;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 20px;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 36px;
+    color: #ec407a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+}
+
+/* Soft Skills Section */
+.soft-skills {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.soft-skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.soft-skills ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Programming Languages Section */
+.programming-languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 20px;
+    margin: 0 auto 50px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.programming-languages .language-item {
+    background-color: #fff1f3;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.programming-languages .language-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ec407a;
+}
+
+.programming-languages .language-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.programming-languages .language-item a {
+    font-weight: bold;
+    color: #ec407a;
+    text-decoration: none;
+}
+
+.programming-languages .language-item a:hover {
+    color: #d81b60;
+}
+
+/* Footer */
+.footer {
+    background-color: #f48fb1; /* Soft pink footer */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .programming-languages {
+        grid-template-columns: 1fr; /* Switch to single column on small screens */
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
 /* Form Section */
 .contact-section {
     background-color: white;
