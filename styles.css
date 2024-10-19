@@ -1,75 +1,86 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fce4ec; /* Soft light pink */
+    font-family: 'Roboto', sans-serif; /* General font for the whole page */
+    background-color: #ffffff; /* Neutral light background */
     margin: 0;
     padding: 0;
     color: #333;
-     background-color: #fce4ec !important;
 }
-
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1000px; /* Maximum width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 40px 20px; /* Padding around the content */
 }
 
-/* Navbar */
+/* Navbar Section */
 .navbar {
-    background-color: #f8bbd0; /* Soft pastel pink */
-    padding: 20px 0;
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    background-color: #ff4081; /* Vibrant pink background */
+    padding: 15px 0;
     text-align: center;
-    border-bottom: 3px solid #f48fb1; /* Subtle border for elegance */
+    border-bottom: 3px solid #ff80ab; /* Slightly lighter pink border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    z-index: 1000; /* Ensures navbar stays on top */
 }
 
 .navbar ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the nav items */
 }
 
 .navbar ul li {
-    margin: 0 15px;
+    margin: 0 25px; /* Spacing between navbar items */
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    color: #ec407a; /* Soft pink */
-    font-weight: bold;
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold for emphasis */
     font-size: 18px;
     letter-spacing: 1px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effect */
 }
 
 .navbar ul li a:hover {
-    color: #f48fb1; /* Lighter pink for hover effect */
+    color: #ff80ab; /* Lighter pink on hover */
+    border-bottom: 2px solid white; /* Underline effect on hover */
 }
 
-/* Form Section */
+/* Hero Section (Optional - for adding a welcome title or image) */
+.hero-section {
+    padding: 100px 0; /* Ensure spacing between the navbar and content */
+    text-align: center;
+    color: #ff4081; /* Vibrant pink text */
+}
+
+/* Contact Form Section (Unchanged from Original) */
 .contact-section {
     background-color: white;
-    padding: 40px;
-    border-radius: 20px; /* Rounded corners for a softer look */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Padding for spacing */
+    border-radius: 20px; /* Rounded corners for soft appearance */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     max-width: 600px;
-    margin: 50px auto;
+    margin: 50px auto; /* Center form on the page */
     text-align: left;
 }
 
 .contact-section h1 {
-    text-align: center;
-    color: #ec407a; /* Soft pink */
-    font-size: 36px;
+    text-align: center; /* Center the form heading */
+    color: #ec407a; /* Soft pink for heading */
+    font-size: 36px; /* Large heading size */
     font-weight: 700;
     margin-bottom: 30px;
-    font-family: 'Lora', serif; /* A more elegant font for headings */
+    font-family: 'Lora', serif; /* Elegant font for headings */
 }
 
 .contact-form .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 25px; /* Spacing between form elements */
 }
 
 .contact-form label {
@@ -77,62 +88,62 @@ body {
     font-size: 16px;
     margin-bottom: 8px;
     display: block;
-    color: #ec407a; /* Soft pink */
+    color: #ec407a; /* Soft pink labels */
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    width: 100%;
-    padding: 14px 18px;
-    border: 1px solid #ec407a; /* Pink border for inputs */
-    border-radius: 12px; /* Rounded edges for a softer feel */
+    width: 100%; /* Full width form inputs */
+    padding: 14px 18px; /* Spacing inside inputs */
+    border: 1px solid #ec407a; /* Pink border */
+    border-radius: 12px; /* Rounded edges for softness */
     font-size: 16px;
     background-color: #fff1f3; /* Very light pink background */
     color: #555;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth focus effect */
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: #f48fb1; /* Focused input border */
-    box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
+    outline: none; /* Remove default outline */
+    border-color: #f48fb1; /* Focused border color */
+    box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2); /* Shadow on focus */
     background-color: white;
 }
 
 .contact-form textarea {
-    resize: vertical;
-    min-height: 150px;
+    resize: vertical; /* Allow resizing vertically */
+    min-height: 150px; /* Set minimum height for textarea */
 }
 
 /* Submit Button */
 .submit-btn {
-    background-color: #ec407a;
-    color: white;
+    background-color: #ec407a; /* Pink button background */
+    color: white; /* White text color */
     border: none;
-    padding: 14px;
+    padding: 14px; /* Padding inside the button */
     font-size: 18px;
     font-weight: bold;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 20px; /* Spacing above the button */
 }
 
 .submit-btn:hover {
-    background-color: #d81b60;
-    transform: translateY(-2px);
+    background-color: #d81b60; /* Darker pink on hover */
+    transform: translateY(-2px); /* Slight button lift on hover */
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
-    background-color: #f48fb1; /* Soft pink footer */
+    background-color: #ff80ab; /* Soft pink footer background */
     padding: 20px;
     text-align: center;
-    color: white;
+    color: white; /* White footer text */
     font-size: 16px;
     position: relative;
     bottom: 0;
@@ -145,21 +156,20 @@ body {
     font-weight: bold;
 }
 
-/* Add some space between the footer and form */
-.contact-section {
-    margin-bottom: 50px;
-}
-
-/* Responsive Design */
+/* Responsive Design (Mobile View) */
 @media (max-width: 768px) {
-    .contact-section {
+    .container {
         padding: 30px;
-        margin: 30px auto;
-        width: 90%;
+        width: 90%; /* Adjust container width on smaller screens */
     }
 
     .navbar ul li {
-        display: block;
-        margin: 10px 0;
+        display: block; /* Stack navbar items vertically on mobile */
+        margin: 10px 0; /* Add space between items */
+    }
+
+    .contact-section {
+        padding: 30px; /* Adjust padding for mobile */
+        margin: 30px auto; /* Adjust form margin for mobile */
     }
 }
