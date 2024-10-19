@@ -1,44 +1,67 @@
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fce4ec; /* Light pink background */
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container ul li {
+    margin: 0 1rem;
+}
+
+.nav-container ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-container ul li a.active {
+    color: #ff4081; /* Pink color for active links */
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #f48fb1;
-    padding: 15px 0;
+.hero {
     text-align: center;
 }
 
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.navbar ul li {
-    display: inline;
-    margin: 0 15px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
+.skill-item {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: center;
     font-weight: 500;
-}
-
-.navbar ul li a.active {
-    border-bottom: 2px solid white;
 }
 /* Form Section */
 .contact-section {
