@@ -1,86 +1,165 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* General font for the whole page */
-    background-color: #ffffff; /* Neutral light background */
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe6f0; /* Soft pink background */
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #444;
 }
 
 .container {
-    max-width: 1000px; /* Maximum width for content */
-    margin: 0 auto; /* Center the container */
-    padding: 40px 20px; /* Padding around the content */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Navbar Section */
-.navbar {
-    position: fixed; /* Fixes the navbar at the top */
-    top: 0;
-    width: 100%; /* Full width */
-    background-color: #ff4081; /* Vibrant pink background */
-    padding: 15px 0;
+/* Header */
+.header {
+    background-color: #ff99cc;
     text-align: center;
-    border-bottom: 3px solid #ff80ab; /* Slightly lighter pink border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    z-index: 1000; /* Ensures navbar stays on top */
+    padding: 20px;
+    color: white;
+    border-bottom: 5px solid #ff6699;
 }
 
-.navbar ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
+.header h1 {
+    font-size: 36px;
     margin: 0;
-    display: flex; /* Flexbox for horizontal alignment */
-    justify-content: center; /* Center the nav items */
 }
 
-.navbar ul li {
-    margin: 0 25px; /* Spacing between navbar items */
+.header h2 {
+    font-size: 24px;
+    margin: 5px 0;
 }
 
-.navbar ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* White text color */
-    font-weight: bold; /* Bold for emphasis */
+/* About Me Section */
+.about {
+    background-color: white;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.info {
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.info h3 {
+    font-size: 28px;
+    color: #ff6699;
+}
+
+.info p {
     font-size: 18px;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effect */
+    color: #666;
 }
 
-.navbar ul li a:hover {
-    color: #ff80ab; /* Lighter pink on hover */
-    border-bottom: 2px solid white; /* Underline effect on hover */
+.info ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Hero Section (Optional - for adding a welcome title or image) */
-.hero-section {
-    padding: 100px 0; /* Ensure spacing between the navbar and content */
+.info ul li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* Favorite Programming Languages Section */
+.languages {
+    background-color: #ff99cc;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.languages h3 {
     text-align: center;
-    color: #ff4081; /* Vibrant pink text */
+    font-size: 24px;
+    color: white;
 }
 
-/* Contact Form Section (Unchanged from Original) */
+.languages table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.languages th, .languages td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.languages th {
+    background-color: #ff6699;
+    color: white;
+}
+
+.languages a {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+.languages a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.contact a {
+    color: #ff6699;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Section */
 .contact-section {
     background-color: white;
-    padding: 40px; /* Padding for spacing */
-    border-radius: 20px; /* Rounded corners for soft appearance */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin: 50px auto; /* Center form on the page */
+    margin: 50px auto;
     text-align: left;
 }
 
 .contact-section h1 {
-    text-align: center; /* Center the form heading */
-    color: #ec407a; /* Soft pink for heading */
-    font-size: 36px; /* Large heading size */
-    font-weight: 700;
+    text-align: center;
+    color: #d81b60;
+    font-size: 32px;
     margin-bottom: 30px;
-    font-family: 'Lora', serif; /* Elegant font for headings */
 }
 
 .contact-form .form-group {
-    margin-bottom: 25px; /* Spacing between form elements */
+    margin-bottom: 25px;
 }
 
 .contact-form label {
@@ -88,88 +167,57 @@ body {
     font-size: 16px;
     margin-bottom: 8px;
     display: block;
-    color: #ec407a; /* Soft pink labels */
+    color: #555;
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
-    width: 100%; /* Full width form inputs */
-    padding: 14px 18px; /* Spacing inside inputs */
-    border: 1px solid #ec407a; /* Pink border */
-    border-radius: 12px; /* Rounded edges for softness */
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
-    background-color: #fff1f3; /* Very light pink background */
-    color: #555;
-    transition: all 0.3s ease; /* Smooth focus effect */
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
-.contact-form select:focus,
 .contact-form textarea:focus {
-    outline: none; /* Remove default outline */
-    border-color: #f48fb1; /* Focused border color */
-    box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2); /* Shadow on focus */
+    outline: none;
+    border-color: #ec407a;
+    box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
     background-color: white;
 }
 
 .contact-form textarea {
-    resize: vertical; /* Allow resizing vertically */
-    min-height: 150px; /* Set minimum height for textarea */
+    resize: vertical;
+    min-height: 150px;
 }
 
 /* Submit Button */
 .submit-btn {
-    background-color: #ec407a; /* Pink button background */
-    color: white; /* White text color */
+    background-color: #ec407a;
+    color: white;
     border: none;
-    padding: 14px; /* Padding inside the button */
+    padding: 14px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 12px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     width: 100%;
-    margin-top: 20px; /* Spacing above the button */
 }
 
 .submit-btn:hover {
-    background-color: #d81b60; /* Darker pink on hover */
-    transform: translateY(-2px); /* Slight button lift on hover */
+    background-color: #d81b60;
+    transform: translateY(-2px);
 }
 
-/* Footer Section */
+/* Footer */
 .footer {
-    background-color: #ff80ab; /* Soft pink footer background */
-    padding: 20px;
+    background-color: #ff99cc;
     text-align: center;
-    color: white; /* White footer text */
-    font-size: 16px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer a {
+    padding: 20px;
     color: white;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-/* Responsive Design (Mobile View) */
-@media (max-width: 768px) {
-    .container {
-        padding: 30px;
-        width: 90%; /* Adjust container width on smaller screens */
-    }
-
-    .navbar ul li {
-        display: block; /* Stack navbar items vertically on mobile */
-        margin: 10px 0; /* Add space between items */
-    }
-
-    .contact-section {
-        padding: 30px; /* Adjust padding for mobile */
-        margin: 30px auto; /* Adjust form margin for mobile */
-    }
+    margin-top: 20px;
 }
