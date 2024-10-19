@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8bbd0; /* Soft pastel pink */
+    background-color: #fce4ec; /* Light pink background */
     margin: 0;
     padding: 0;
     color: #333;
@@ -15,8 +15,8 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #ec407a;
-    padding: 20px 0;
+    background-color: #f48fb1;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -28,21 +28,18 @@ body {
 
 .navbar ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
-.navbar ul li a:hover {
-    color: #ffebee;
+.navbar ul li a.active {
+    border-bottom: 2px solid white;
 }
-
 /* Form Section */
 .contact-section {
     background-color: white;
