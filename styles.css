@@ -24,10 +24,11 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar ul li {
-    display: inline;
     margin: 0 20px;
 }
 
@@ -137,7 +138,7 @@ body {
 
 /* Add some space between the footer and form */
 .contact-section {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 /* Responsive Design */
@@ -145,6 +146,7 @@ body {
     .contact-section {
         padding: 30px;
         margin: 30px auto;
+        width: 90%;
     }
 
     .navbar ul li {
