@@ -6,6 +6,9 @@ body {
     padding: 0;
     color: #333;
 }
+body {
+    background-color: #fce4ec !important;
+}
 
 .container {
     max-width: 1200px;
