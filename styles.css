@@ -1,6 +1,3 @@
-لإضافة جزء فورم الاتصال من الكود الذي قدمته إلى الكود السابق، يمكن إدراج قسم الفورم داخل الـ `<body>` في الكود الأول. سأقوم بإضافة الفورم داخل قسم جديد يسمى "Contact Me" ليظهر في صفحة الويب بعد قسم لغات البرمجة. إليك الكود المعدل:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +21,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            padding-bottom: 80px; /* Added to prevent content from being hidden by footer */
         }
 
-        /* Navigation */
         .nav-links {
             display: flex;
             justify-content: center;
@@ -51,7 +46,6 @@
             transform: translateY(-2px);
         }
 
-        /* Profile Section */
         .profile-section {
             text-align: center;
             margin-bottom: 40px;
@@ -79,7 +73,6 @@
             margin-bottom: 20px;
         }
 
-        /* Soft Skills */
         .skills-section {
             background-color: white;
             padding: 30px;
@@ -103,7 +96,6 @@
             font-weight: 500;
         }
 
-        /* Programming Languages */
         .languages-section {
             background-color: white;
             padding: 30px;
@@ -144,95 +136,12 @@
             text-decoration: underline;
         }
 
-        /* Contact Form Section */
-        .contact-section {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 50px auto;
-            text-align: left;
-        }
-
-        .contact-section h1 {
-            text-align: center;
-            color: #d81b60;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: 25px;
-        }
-
-        .contact-form label {
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 8px;
-            display: block;
-            color: #555;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            background-color: #f9f9f9;
-            transition: all 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #ec407a;
-            box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
-            background-color: white;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        /* Submit Button */
-        .submit-btn {
-            background-color: #ec407a;
-            color: white;
-            border: none;
-            padding: 14px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            background-color: #d81b60;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
         footer {
             background-color: #d81b60;
             color: white;
             text-align: center;
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Section Headers */
-        h2 {
-            color: #d81b60;
-            text-align: center;
-            margin-bottom: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -287,30 +196,22 @@
         </section>
 
         <!-- Contact Form Section -->
-        <section class="contact-section" id="contact">
-            <h1>Contact Me</h1>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
 
-section>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
     </div>
 
     <footer>
@@ -318,6 +219,3 @@ section>
     </footer>
 </body>
 </html>
-```
-
-في هذا الكود، تم إضافة قسم الاتصال إلى الكود الرئيسي وتم تحسين التصميم ليكون متناسقًا مع الصفحة. تم استخدام نفس الألوان والتنسيق لضمان التناسق مع بقية العناصر.
