@@ -16,7 +16,7 @@ try {
     $mail->Host = 'smtp.gmail.com'; // خادم البريد الخاص بـ Gmail
     $mail->SMTPAuth = true;
     $mail->Username = 'jomanaabanda41@gmail.com'; // بريدك الإلكتروني
-    $mail->Password = '7656 1763'; // كلمة مرور التطبيق
+    $mail->Password = '76561763'; // كلمة مرور التطبيق
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587; // المنفذ
 
