@@ -1,28 +1,40 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // الحصول على البيانات المرسلة من النموذج
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $subject = htmlspecialchars($_POST['subject']);
-    $message = htmlspecialchars($_POST['message']);
+// تأكد من تضمين مسار PHPMailer
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
 
-    // إعداد عنوان البريد المرسل إليه (ضع عنوان بريدك هنا)
-    $to = "Jomanaabanda41@gmail.com"; // استبدل هذا بعنوان بريدك الحقيقي
-    $headers = "From: " . $email . "\r\n" .
-               "Reply-To: " . $email . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+// استخدام الـ namespace الخاص بـ PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // رسالة البريد
-    $fullMessage = "اسم المرسل: " . $name . "\n\n" .
-                   "البريد الإلكتروني: " . $email . "\n\n" .
-                   "الموضوع: " . $subject . "\n\n" .
-                   "الرسالة:\n" . $message;
+$mail = new PHPMailer(true); // إنشاء كائن PHPMailer
 
-    // استخدام mail() لإرسال البريد
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        echo "تم إرسال رسالتك بنجاح!";
-    } else {
-        echo "حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى لاحقًا.";
-    }
+try {
+    // إعدادات الخادم SMTP لجوجل
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; // خادم البريد الخاص بـ Gmail
+    $mail->SMTPAuth = true;
+    $mail->Username = 'jomanaabanda41@gmail.com'; // بريدك الإلكتروني
+    $mail->Password = '7656 1763'; // كلمة مرور التطبيق
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587; // المنفذ
+
+    // إعدادات البريد
+    $mail->setFrom('your-email@gmail.com', 'Your Name'); // البريد المرسل
+    $mail->addAddress('jomanaabanda41@gmail.com', 'Jumana abanda'); // البريد المرسل إليه
+    $mail->addReplyTo('your-email@gmail.com', 'Your Name'); // الرد على البريد
+
+    // المحتوى
+    $mail->isHTML(true); // إرسال البريد بصيغة HTML
+    $mail->Subject = 'Test Email via PHPMailer'; // عنوان الرسالة
+    $mail->Body    = '<h1>This is a test email sent via PHPMailer!</h1>'; // جسم الرسالة
+    $mail->AltBody = 'This is a test email sent via PHPMailer!'; // نص الرسالة عند عدم دعم HTML
+
+    // إرسال الرسالة
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
