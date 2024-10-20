@@ -151,7 +151,26 @@
             transform: scale(1.05);
         }
 
-           .language-card {
+        .languages-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .language-card {
             background: linear-gradient(145deg, #ff99cc, #ff80ab);
             padding: 15px;
             border-radius: 10px;
@@ -161,31 +180,41 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .language-card:hover {
-            transform: translateY(-5px);
-        }
-
         .language-card h3 {
-            margin-bottom: 10px;
+            font-size: 1.3em;
+            margin-bottom: 8px;
         }
 
         .language-card p {
-            margin-bottom: 15px;
+            font-size: 0.9em;
+            margin-bottom: 12px;
         }
 
         .language-card a {
             color: white;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 5px 15px;
             border: 2px solid white;
             border-radius: 20px;
             display: inline-block;
             transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px);
         }
 
         .language-card a:hover {
             background: white;
             color: #ff99cc;
+        }
+
+        @media (max-width: 600px) {
+            .languages-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
 
         footer {
@@ -267,33 +296,60 @@
             </ul>
         </section>
 
-       
-     <section class="languages-section">
-            <h2 class="section-title">Favorite Programming Languages</h2>
-            <div class="languages-grid">
-                <div class="language-card">
-                    <h3>Python</h3>
-                    <p>High-level programming language</p>
-                    <a href="#learn-python">Learn Python</a>
-                </div>
-                <div class="language-card">
-                    <h3>JavaScript</h3>
-                    <p>Web development language</p>
-                    <a href="#learn-javascript">Learn JavaScript</a>
-                </div>
-                <div class="language-card">
-                    <h3>Java</h3>
-                    <p>Object-oriented programming language</p>
-                    <a href="#learn-java">Learn Java</a>
-                </div>
-                <div class="language-card">
-                    <h3>C#</h3>
-                    <p>Modern object-oriented language</p>
-                    <a href="#learn-csharp">Learn C#</a>
-                </div>
+     <div class="container">
+    <section class="languages-section">
+        <h2 class="section-title">Favorite Programming Languages</h2>
+        <div class="languages-grid">
+            <div class="language-card">
+                <h3>Python</h3>
+                <p>High-level programming language</p>
+                <a href="#learn-python">Learn Python</a>
             </div>
-        </section>
+            <div class="language-card">
+                <h3>JavaScript</h3>
+                <p>Web development language</p>
+                <a href="#learn-javascript">Learn JavaScript</a>
+            </div>
+            <div class="language-card">
+                <h3>Java</h3>
+                <p>Object-oriented programming language</p>
+                <a href="#learn-java">Learn Java</a>
+            </div>
+            <div class="language-card">
+                <h3>C#</h3>
+                <p>Modern object-oriented language</p>
+                <a href="#learn-csharp">Learn C#</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- بهذا الجزء -->
+<section class="languages-section">
+    <h2 class="section-title">Favorite Programming Languages</h2>
+    <div class="languages-grid">
+        <div class="language-card">
+            <h3>Python</h3>
+            <p>High-level programming language</p>
+            <a href="#learn-python">Learn Python</a>
+        </div>
+        <div class="language-card">
+            <h3>JavaScript</h3>
+            <p>Web development language</p>
+            <a href="#learn-javascript">Learn JavaScript</a>
+        </div>
+        <div class="language-card">
+            <h3>Java</h3>
+            <p>Object-oriented programming language</p>
+            <a href="#learn-java">Learn Java</a>
+        </div>
+        <div class="language-card">
+            <h3>C#</h3>
+            <p>Modern object-oriented language</p>
+            <a href="#learn-csharp">Learn C#</a>
+        </div>
     </div>
+</section>
     <footer>
         <p>&copy; 2024 Jumana Abanda. All rights reserved.</p>
     </footer>
