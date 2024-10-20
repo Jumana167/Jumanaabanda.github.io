@@ -3,75 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumana abanda - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Jumana Abanda - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8bbd0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav-links {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #d81b60;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: white;
+            transition: all 0.3s ease;
+            border: 2px solid #d81b60;
+        }
+
+        .nav-links a:hover {
+            background-color: #d81b60;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .profile-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid #f8bbd0;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-name {
+            font-size: 2.5em;
+            color: #d81b60;
+            margin: 10px 0;
+        }
+
+        .profile-major {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #d81b60;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .skills-section, .languages-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            background-color: #ff99cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .language-card {
+            background: linear-gradient(145deg, #ff99cc, #ff80ab);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .language-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .language-card p {
+            margin-bottom: 15px;
+        }
+
+        .language-card a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border: 2px solid white;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .language-card a:hover {
+            background: white;
+            color: #ff99cc;
+        }
+
+        footer {
+            background-color: #d81b60;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            
+            .profile-name {
+                font-size: 2em;
+            }
+            
+            .skills-list {
+                gap: 10px;
+            }
+            
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+    <div class="container">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+
+        <section class="profile-section" id="home">
+            <img src="/api/placeholder/200/200" alt="Jumana Abanda" class="profile-image">
+            <h1 class="profile-name">Jumana Abanda</h1>
+            <p class="profile-major">Major: Computer Information Systems</p>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">Soft Skills</h2>
+            <ul class="skills-list">
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Communication</li>
+                <li>Critical Thinking</li>
+                <li>Time Management</li>
             </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        <section class="hero">
-            <div class="profile">
-                <img src="images/Jumana-abanda.jpg" alt="Jumana abanda" class="profile-img">
-                <h1>Jumana abanda</h1>
-                <p class="major">Major: Computer Information Systems</p>
-            </div>
         </section>
 
-        <section class="skills">
-            <h2>Soft Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Problem Solving</div>
-                <div class="skill-item">Team Collaboration</div>
-                <div class="skill-item">Communication</div>
-                <div class="skill-item">Critical Thinking</div>
-                <div class="skill-item">Time Management</div>
+        <section class="languages-section">
+            <h2 class="section-title">Favorite Programming Languages</h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <h3>Python</h3>
+                    <p>High-level programming language</p>
+                    <a href="#learn-python">Learn Python</a>
+                </div>
+                <div class="language-card">
+                    <h3>JavaScript</h3>
+                    <p>Web development language</p>
+                    <a href="#learn-javascript">Learn JavaScript</a>
+                </div>
+                <div class="language-card">
+                    <h3>Java</h3>
+                    <p>Object-oriented programming language</p>
+                    <a href="#learn-java">Learn Java</a>
+                </div>
+                <div class="language-card">
+                    <h3>C#</h3>
+                    <p>Modern object-oriented language</p>
+                    <a href="#learn-csharp">Learn C#</a>
+                </div>
             </div>
         </section>
-
-        <section class="languages">
-            <h2>Favorite Programming Languages</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Language</th>
-                            <th>Description</th>
-                            <th>Learn More</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Python</td>
-                            <td>High-level programming language</td>
-                            <td><a href="https://www.python.org/" target="_blank">Learn Python</a></td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>Web development language</td>
-                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Learn JavaScript</a></td>
-                        </tr>
-                        <tr>
-                            <td>Java</td>
-                            <td>Object-oriented programming language</td>
-                            <td><a href="https://www.java.com/" target="_blank">Learn Java</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+    </div>
 
     <footer>
-        <p>Contact me at: <a href="mailto:jomanaabanda41@gmail.com">jomanaabanda41@gmail.com</a></p>
+        <p>&copy; 2024 Jumana Abanda. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
