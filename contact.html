@@ -198,7 +198,7 @@
                 <p>I'd love to hear from you! Fill out the form below to get in touch.</p>
             </div>
 
-            <form id="contactForm">
+            <form action="send-email.php" method="POST" id="contactForm">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
@@ -207,7 +207,35 @@
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
+             
                 </div>
+                                <div class="form-group">
+  <label for="country">Select a Country:</label>
+<select id="country" name="country" style="
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff99cc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: white;
+    color: #666;
+    transition: all 0.3s ease;">
+    <option value="ae">United Arab Emirates</option>
+    <option value="bh">Bahrain</option>
+    <option value="eg">Egypt</option>
+    <option value="iq">Iraq</option>
+    <option value="jo">Jordan</option>
+    <option value="kw">Kuwait</option>
+    <option value="lb">Lebanon</option>
+    <option value="ly">Libya</option>
+    <option value="ma">Morocco</option>
+    <option value="om">Oman</option>
+    <option value="qa">Qatar</option>
+    <option value="sa">Saudi Arabia</option>
+    <option value="sy">Syria</option>
+    <option value="tn">Tunisia</option>
+    <option value="ye">Yemen</option>
+</select>  </div>
 
                 <div class="form-group">
                     <label for="subject">Subject</label>
