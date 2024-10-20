@@ -14,10 +14,10 @@
         }
 
         body {
-            background-color: ##ffe6f2; /* خلفية وردية ناعمة */
+            background-color: #ffe6f2; /* خلفية وردية */
             color: #333;
             line-height: 1.6;
-            scroll-behavior: smooth; /* Smooth scroll */
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -58,7 +58,7 @@
         }
 
         .contact-section {
-            background-color: white;
+            background-color: #ffebf3; /* خلفية وردية فاتحة */
             padding: 40px;
             border-radius: 20px;
             margin-bottom: 40px;
@@ -100,21 +100,24 @@
 
         input[type="text"],
         input[type="email"],
-        textarea {
+        textarea,
+        select {
             width: 100%;
             padding: 12px;
             border: 2px solid #ff99cc;
             border-radius: 8px;
             font-size: 1em;
             transition: all 0.3s ease;
+            background-color: white;
         }
 
         input[type="text"]:focus,
         input[type="email"]:focus,
-        textarea:focus {
+        textarea:focus,
+        select:focus {
             outline: none;
             border-color: #ff66b2;
-            transform: scale(1.05); /* Slightly enlarge on focus */
+            transform: scale(1.05);
         }
 
         textarea {
@@ -138,7 +141,7 @@
 
         button[type="submit"]:hover {
             background-color: #ff3385;
-            transform: translateY(-2px) scale(1.05); /* Add bounce effect */
+            transform: translateY(-2px) scale(1.05);
         }
 
         .social-links {
@@ -156,7 +159,7 @@
 
         .social-links a:hover {
             color: #ff3385;
-            transform: scale(1.1); /* Enlarge social icons on hover */
+            transform: scale(1.1);
         }
 
         .cv-download {
@@ -232,7 +235,8 @@
 
                 <div class="form-group">
                     <label for="country">Select a Country:</label>
-                    <select id="country" name="country">
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select a country</option>
                         <option value="ae">United Arab Emirates</option>
                         <option value="bh">Bahrain</option>
                         <option value="eg">Egypt</option>
@@ -271,13 +275,13 @@
             </div>
 
             <div class="cv-download">
-                <a href="Cv_jumana.pdf" download="Jumana_Abanda_CV">Download My CV</a>
+                <a href="cv.pdf" download>Download My CV</a>
             </div>
         </section>
-    </div>
 
-    <footer>
-        &copy; 2024 Jumana Abanda. All rights reserved.
-    </footer>
+        <footer>
+            &copy; 2024 Jumana Abanda. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
