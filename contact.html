@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #f8bbd0;
+            background-color: #ffe6f2; /* خلفية وردية ناعمة */
             color: #333;
             line-height: 1.6;
             scroll-behavior: smooth; /* Smooth scroll */
@@ -42,17 +42,17 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #d81b60;
+            color: #ff66b2; /* اللون الوردي */
             font-weight: 600;
             padding: 10px 20px;
             border-radius: 20px;
             background-color: white;
             transition: all 0.3s ease;
-            border: 2px solid #d81b60;
+            border: 2px solid #ff66b2;
         }
 
         .nav-links a:hover {
-            background-color: #d81b60;
+            background-color: #ffb6c1;
             color: white;
             transform: translateY(-2px);
         }
@@ -66,7 +66,7 @@
         }
 
         .section-title {
-            color: #d81b60;
+            color: #ff66b2;
             margin-bottom: 30px;
             font-size: 2em;
             text-align: center;
@@ -113,7 +113,7 @@
         input[type="email"]:focus,
         textarea:focus {
             outline: none;
-            border-color: #d81b60;
+            border-color: #ff66b2;
             transform: scale(1.05); /* Slightly enlarge on focus */
         }
 
@@ -123,7 +123,7 @@
         }
 
         button[type="submit"] {
-            background-color: #d81b60;
+            background-color: #ff66b2;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -137,7 +137,7 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #c2185b;
+            background-color: #ff3385;
             transform: translateY(-2px) scale(1.05); /* Add bounce effect */
         }
 
@@ -147,7 +147,7 @@
         }
 
         .social-links a {
-            color: #d81b60;
+            color: #ff66b2;
             text-decoration: none;
             margin: 0 10px;
             font-weight: 500;
@@ -155,12 +155,33 @@
         }
 
         .social-links a:hover {
-            color: #c2185b;
+            color: #ff3385;
             transform: scale(1.1); /* Enlarge social icons on hover */
         }
 
+        .cv-download {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cv-download a {
+            background-color: #ff66b2;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cv-download a:hover {
+            background-color: #ff3385;
+            transform: translateY(-2px) scale(1.05);
+        }
+
         footer {
-            background-color: #d81b60;
+            background-color: #ff66b2;
             color: white;
             text-align: center;
             padding: 20px;
@@ -207,35 +228,28 @@
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
-             
                 </div>
- <div class="form-group">
-  <label for="country">Select a Country:</label>
-<select id="country" name="country" style="
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ff99cc;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: white;
-    color: #666;
-    transition: all 0.3s ease;">
-    <option value="ae">United Arab Emirates</option>
-    <option value="bh">Bahrain</option>
-    <option value="eg">Egypt</option>
-    <option value="iq">Iraq</option>
-    <option value="jo">Jordan</option>
-    <option value="kw">Kuwait</option>
-    <option value="lb">Lebanon</option>
-    <option value="ly">Libya</option>
-    <option value="ma">Morocco</option>
-    <option value="om">Oman</option>
-    <option value="qa">Qatar</option>
-    <option value="sa">Saudi Arabia</option>
-    <option value="sy">Syria</option>
-    <option value="tn">Tunisia</option>
-    <option value="ye">Yemen</option>
-</select>  </div>
+
+                <div class="form-group">
+                    <label for="country">Select a Country:</label>
+                    <select id="country" name="country">
+                        <option value="ae">United Arab Emirates</option>
+                        <option value="bh">Bahrain</option>
+                        <option value="eg">Egypt</option>
+                        <option value="iq">Iraq</option>
+                        <option value="jo">Jordan</option>
+                        <option value="kw">Kuwait</option>
+                        <option value="lb">Lebanon</option>
+                        <option value="ly">Libya</option>
+                        <option value="ma">Morocco</option>
+                        <option value="om">Oman</option>
+                        <option value="qa">Qatar</option>
+                        <option value="sa">Saudi Arabia</option>
+                        <option value="sy">Syria</option>
+                        <option value="tn">Tunisia</option>
+                        <option value="ye">Yemen</option>
+                    </select>
+                </div>
 
                 <div class="form-group">
                     <label for="subject">Subject</label>
@@ -255,18 +269,15 @@
                 <a href="https://github.com/Jumana167">GitHub</a> |
                 <a href="https://web.facebook.com/jomana167200">Facebook</a>
             </div>
+
+            <div class="cv-download">
+                <a href="path/to/your/cv.pdf" download="Jumana_Abanda_CV">Download My CV</a>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Jumana Abanda. All Rights Reserved.</p>
+        &copy; 2024 Jumana Abanda. All rights reserved.
     </footer>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form submission
-            alert("Thank you for your message! We'll get back to you soon."); // Simulate form submission
-        });
-    </script>
 </body>
 </html>
