@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jumana Abanda - Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Raleway', sans-serif;
         }
 
         body {
-            background-color: #f8bbd0;
+            background-color: #ffe4e1;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
@@ -30,7 +30,7 @@
         .nav-links {
             position: sticky;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 15px;
             display: flex;
             justify-content: center;
@@ -53,10 +53,10 @@
         }
 
         .nav-links a:hover {
-            background: linear-gradient(145deg, #ff99cc, #ff80ab);
+            background-color: #ffb6c1;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
         }
 
         .profile-section {
@@ -75,7 +75,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 8px solid #f8bbd0;
+            border: 8px solid #ffb6c1;
             margin: 20px auto;
             display: block;
             object-fit: cover;
@@ -100,11 +100,15 @@
         }
 
         .about-me {
-            margin: 20px auto;
-            max-width: 600px;
+            background-color: #ffe4e1;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 15px;
             text-align: left;
             font-size: 1.1em;
             color: #555;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .section-title {
@@ -134,7 +138,7 @@
         }
 
         .skills-list li {
-            background-color: #ff99cc;
+            background-color: #ffb6c1;
             color: white;
             padding: 10px 20px;
             border-radius: 20px;
@@ -166,29 +170,6 @@
 
         .language-card:hover {
             transform: translateY(-5px);
-        }
-
-        .language-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .language-card p {
-            margin-bottom: 15px;
-        }
-
-        .language-card a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 15px;
-            border: 2px solid white;
-            border-radius: 20px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .language-card a:hover {
-            background: white;
-            color: #ff99cc;
         }
 
         footer {
@@ -229,6 +210,15 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -236,7 +226,7 @@
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact Me</a>
-            <a href="images/Cv_jumana.docx" download>Download CV</a>
+            <a href="images/Cv_jumana.pdf" download>Download CV</a>
         </nav>
 
         <section class="profile-section" id="home">
@@ -281,7 +271,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <footer>
@@ -289,3 +278,4 @@
     </footer>
 </body>
 </html>
+F
