@@ -1,288 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Jumana Abanda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #ffe6f2; /* خلفية وردية */
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .nav-links {
-            position: sticky;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #ff66b2; /* اللون الوردي */
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 20px;
-            background-color: white;
-            transition: all 0.3s ease;
-            border: 2px solid #ff66b2;
-        }
-
-        .nav-links a:hover {
-            background-color: #ffb6c1;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .contact-section {
-            background-color: #ffebf3; /* خلفية وردية فاتحة */
-            padding: 40px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .section-title {
-            color: #ff66b2;
-            margin-bottom: 30px;
-            font-size: 2em;
-            text-align: center;
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #666;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ff99cc;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            background-color: white;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        textarea:focus,
-        select:focus {
-            outline: none;
-            border-color: #ff66b2;
-            transform: scale(1.05);
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        button[type="submit"] {
-            background-color: #ff66b2;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 0 auto;
-            width: 200px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #ff3385;
-            transform: translateY(-2px) scale(1.05);
-        }
-
-        .social-links {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .social-links a {
-            color: #ff66b2;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #ff3385;
-            transform: scale(1.1);
-        }
-
-        .cv-download {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .cv-download a {
-            background-color: #ff66b2;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .cv-download a:hover {
-            background-color: #ff3385;
-            transform: translateY(-2px) scale(1.05);
-        }
-
-        footer {
-            background-color: #ff66b2;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 15px 15px 0 0;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
-            
-            .contact-section {
-                padding: 20px;
-            }
-            
-            button[type="submit"] {
-                width: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <nav>
     <div class="container">
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-        </nav>
-
-        <section class="contact-section">
-            <h1 class="section-title">Contact Me</h1>
-            
-            <div class="contact-info">
-                <p>I'd love to hear from you! Fill out the form below to get in touch.</p>
-            </div>
-
-            <form action="send-mail.php" method="POST" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="country">Select a Country:</label>
-                    <select id="country" name="country" required>
-                        <option value="" disabled selected>Select a country</option>
-                        <option value="ae">United Arab Emirates</option>
-                        <option value="bh">Bahrain</option>
-                        <option value="eg">Egypt</option>
-                        <option value="iq">Iraq</option>
-                        <option value="jo">Jordan</option>
-                        <option value="kw">Kuwait</option>
-                        <option value="lb">Lebanon</option>
-                        <option value="ly">Libya</option>
-                        <option value="ma">Morocco</option>
-                        <option value="om">Oman</option>
-                        <option value="qa">Qatar</option>
-                        <option value="sa">Saudi Arabia</option>
-                        <option value="sy">Syria</option>
-                        <option value="tn">Tunisia</option>
-                        <option value="ye">Yemen</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jumana-abanda-2b6253214/">LinkedIn</a> |
-                <a href="https://github.com/Jumana167">GitHub</a> |
-                <a href="https://web.facebook.com/jomana167200">Facebook</a>
-            </div>
-
-            <div class="cv-download">
-                            <a href="https://raw.githubusercontent.com/Jumana167/Jumanaabanda.github.io/c30cdbdc46c9177c71e1537fe0d5415f602d9e37/Cv%20juaman.docx" download>Download My CV</a>
-
-            </div>
-        </section>
-
-        <footer>
-            &copy; 2024 Jumana Abanda. All rights reserved.
-        </footer>
+      <h1 class="logo">Jumana Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact Me</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <section class="contact">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>Feel free to reach out to me through any of the platforms below!</p>
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/jumana-abanda-2b6253214/?trk=public-profile-join-page" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:jomanaabanda41@gmail.com">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="tel:0799068748">
+          <i class="fas fa-phone-alt"></i>
+          <span>Phone</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
